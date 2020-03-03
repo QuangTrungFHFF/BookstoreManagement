@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Main
 {
-    class Employees
+    class Employee
     {
         public string EmployeeID { get; set; }
         public string EmployeeFirstName { get; set; }
@@ -20,7 +20,7 @@ namespace Main
         public string City { get; set; }
         public string Nationality { get; set; }
 
-        public Employees(string employeeID, string employeeFirstName, string employeeLastName,
+        public Employee(string employeeID, string employeeFirstName, string employeeLastName,
             string username, string password, string jobTitle, string branch, string department,
             string bussinessPhoneNumber, string homePhoneNumber, string address,
             string city, string nationality)
