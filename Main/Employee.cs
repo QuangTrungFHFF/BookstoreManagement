@@ -40,6 +40,15 @@ namespace Main
             this.Nationality = nationality;
         }
 
+        public override bool Equals(object obj)
+        {
+            var that = (Employee)obj;
+            return this.EmployeeID.Equals(that.EmployeeID,StringComparison.OrdinalIgnoreCase);
+        }
 
+        public override int GetHashCode()
+        {
+            return this.EmployeeID.GetHashCode();
+        }
     }
 }
