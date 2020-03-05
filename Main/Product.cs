@@ -15,5 +15,19 @@ namespace Main
             this.ProductName = productName;
             this.Category = category;
         }
+        public override string ToString()
+        {
+            return string.Format($"{ProductID} | {ProductName} | {Category}");
+        }
+        public override bool Equals(object obj)
+        {
+            var that = (Product)obj;
+            return this.ProductID.Equals(that.ProductID,StringComparison.OrdinalIgnoreCase);
+        }
+
+        public override int GetHashCode()
+        {
+            return ProductID.GetHashCode();
+        }
     }
 }
