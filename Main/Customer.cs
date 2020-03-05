@@ -28,5 +28,15 @@ namespace Main
             this.City = city;
             this.MemberType = memberType;
         }
+        public override bool Equals(object obj)
+        {
+            var that = (Customer)obj;
+            return this.CustomerID.Equals(that.CustomerID,StringComparison.OrdinalIgnoreCase);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.CustomerID.GetHashCode();
+        }
     }
 }
