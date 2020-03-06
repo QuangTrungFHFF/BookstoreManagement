@@ -28,6 +28,28 @@ namespace Main
             this.City = city;
             this.MemberType = memberType;
         }
+
+        public string GetCustomerName()
+        {
+            return string.Format($"{CustomerID}: {this.CustomerFirstName} {this.CustomerLastName}");
+        }
+
+        public override string ToString()
+        {
+            var info = new StringBuilder();
+            info.Append($"Customer ID: {CustomerID}");
+            info.Append(Environment.NewLine);
+            info.Append($"Customer name: {this.GetCustomerName()}");
+            info.Append(Environment.NewLine);
+            info.Append($"Job Title: {JobTitle}");
+            info.Append(Environment.NewLine);
+            info.Append($"Phone number: {BussinessPhoneNumber}");
+            info.Append(Environment.NewLine);
+            info.Append($"Address: {Address}, {City}");
+            info.Append(Environment.NewLine);
+            info.Append($"Member Type: {MemberType}");
+            return info.ToString();
+        }
         public override bool Equals(object obj)
         {
             var that = (Customer)obj;
