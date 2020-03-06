@@ -18,5 +18,15 @@ namespace Main
             this.ProductID = productID;
             this.Quantity = quantity;
         }
+        public override bool Equals(object obj)
+        {
+            var that = (SaleDetail)obj;
+            return this.ID.Equals(that.ID);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.ID.GetHashCode();
+        }
     }
 }
