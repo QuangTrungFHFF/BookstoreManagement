@@ -9,9 +9,9 @@ namespace Main
         public Guid ID { get; private set; }
         public string SaleID { get; set; }
         public string ProductID { get; set; }
-        public string Quantity { get; set; }
+        public int Quantity { get; set; }
 
-        public SaleDetail(string saleID, string productID, string quantity)
+        public SaleDetail(string saleID, string productID, int quantity)
         {
             this.ID = new Guid();
             this.SaleID = saleID;
